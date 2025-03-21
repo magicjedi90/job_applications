@@ -1,0 +1,31 @@
+
+Work & Projects
+---------------
+- You work in tech and analytics.
+- You're building an open-source Python library called `etl_utilities` to create and clean ETL processes, primarily using pandas, with plans to integrate Spark.
+- You're using PascalCasing for work projects and snake_case for personal projects.
+- You prefer dbt project flow as Stage → Dimension → Fact (with Fact acting similar to Mart).
+- You're using Liquibase for schema versioning and dbt for transformation.
+- You're version-controlling your batch-processing .py scripts for loading and validating stage tables.
+- You're developing your dbt models with the principle that every file name should be unique, and are organizing your dimensions by who, what, when, where.
+- Your stage models use the default view materialization.
+- Surrogate key generation and row numbering should be placed in the source (stage) model, not the dimensions.
+- Dimension tables should handle history independently, not the stage layer.
+- You prefer IsCurrent flags and ValidTo values as NULL instead of LEAD() window logic.
+- You're adding an IsCurrent flag to any table that tracks history.
+- Your employee stage model includes ReportsToManagerEmployeeId and up to SupervisorOrganizationLevel18Id, and you want a cleaner way to handle these in the hierarchy model.
+- You want employee hierarchy surrogate keys to be based on the manager’s current surrogate employee ID and LastModified.
+- You’re considering moving surrogate key generation to dimension models for cleaner stage logic.
+- You want a reusable dbt macro for SCD Type 2 using LEAD() and IS DISTINCT FROM to prevent row bloat.
+
+ETL Process & Presentation
+--------------------------
+- Your ETL process:
+  1. Intake analysis and table creation (using Liquibase)
+  2. Data extraction, standardization, and validation (Python batch processing)
+  3. Transformation with dbt (for dimensions and facts)
+- Each ETL script has its own schedule (daily/weekly/monthly).
+- The process is agile, efficient, and maintainable with minimal developers.
+- You’re preparing a PowerPoint for non-technical leadership to prevent the dissolution of your team and application.
+- The ETL process is DRY and streamlined, using consistent naming across jobs, logs, and tables.
+- You prefer not to expose technical implementation in the stage layer when it adds bloat or violates SRP.

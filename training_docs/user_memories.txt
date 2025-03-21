@@ -1,0 +1,22 @@
+🧠 Project & Technical Info
+- Building a portfolio website.
+- Frontend: Next.js
+- Backend: Rust (Axum or Actix Web)
+- Deployment: GCP (Cloud Run)
+- BI Dashboard: Looker Studio (embedded in site)
+- ETL: etl_utilities Python library, deployed on Cloud Run
+- Backend API will serve:
+  - Dynamic portfolio content (projects, skills, blog posts)
+  - BI-powered public data (employee hierarchy, salary stats)
+- Naming conventions:
+  - snake_case for personal projects
+  - PascalCase for work
+- Rust project files named after DB objects (e.g., project.rs, projects_db.rs)
+
+🧠 Platform & Dev Preferences
+- Background in old-school server deployment (Tomcat/Nginx)
+- Transitioning to cloud-native tooling
+- Docker now working locally for Rust builds
+- Modular project structure preferred (multiple repos over monorepo)
+- Uses JetBrains IDE with Docker integration
+- Fixed OpenSSL build issues with libssl-dev and proper env vars
